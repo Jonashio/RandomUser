@@ -1,13 +1,13 @@
 //
-//  RandomUserUITestsLaunchTests.swift
-//  RandomUserUITests
+//  RandomUserPhoneUITestsLaunchTests.swift
+//  RandomUserPhoneUITests
 //
-//  Created by Jonashio on 27/11/23.
+//  Created by Jonashio on 28/11/23.
 //
 
 import XCTest
 
-final class RandomUserUITestsLaunchTests: XCTestCase {
+final class RandomUserPhoneUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

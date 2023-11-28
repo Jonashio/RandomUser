@@ -1,14 +1,14 @@
 //
-//  RandomUserApp.swift
-//  RandomUser
+//  RandomUserPhoneApp.swift
+//  RandomUserPhone
 //
-//  Created by Jonashio on 27/11/23.
+//  Created by Jonashio on 28/11/23.
 //
 
 import SwiftUI
 
 @main
-struct RandomUserApp: App {
+struct RandomUserPhoneApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

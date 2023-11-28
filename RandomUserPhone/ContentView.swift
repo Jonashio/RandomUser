@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  RandomUser
+//  RandomUserPhone
 //
-//  Created by Jonashio on 27/11/23.
+//  Created by Jonashio on 28/11/23.
 //
 
 import SwiftUI
