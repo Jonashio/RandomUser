@@ -14,22 +14,29 @@ protocol UseCase {
 }
 
 struct GetUsersUseCase: UseCase {
+    
     typealias T = ListUsers
+    let isPreview: Bool
+    
+    init(_ isPreview: Bool = false) {
+        self.isPreview = isPreview
+    }
     
     func execute(parameters: Codable) async -> Result<T, ErrorGeneric> {
+        guard !isPreview else { return await executePreview() }
         guard let parametersRequest = parameters as? ListRequestDTO else { return .failure(.empty) }
         let resultResponse:Result<ListResponseDTO, NetworkError> = await NetworkGeneric().getData(profileEndpoint: .list(parametersRequest), builder: ListResponseDTO.builder())
         
         switch resultResponse {
         case .success(let model):
-            let listUsers = ListUsers(users: model.results.compactMap({ userDTO in
-                guard let id = UUID(uuidString: "") else { return nil }
-                return User(id: id, name: userDTO.name.first + userDTO.name.last, gender: .build(rawValue: userDTO.gender))
-            }) )
-            
-            return .success(listUsers)
+            return .success(ListUsers(users: model.results.compactMap({ User.builder($0) }) ))
         case .failure(let failure):
             return .failure(.general(failure))
         }
+    }
+    
+    func executePreview() async -> Result<T, ErrorGeneric> {
+        guard let model = LocalFileManager.loadPrivateFile(filename: "randomuser", ofType: "json", builder: ListResponseDTO.builder()) else { return .failure(.empty) }
+        return .success(ListUsers(users: model.results.compactMap({ User.builder($0) }) ))
     }
 }

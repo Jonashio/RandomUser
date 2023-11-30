@@ -10,5 +10,5 @@ import Foundation
 struct ListRequestDTO: Codable {
     let results: Int
     let page: Int
-    let seed: String
+    let seed: String?
 }

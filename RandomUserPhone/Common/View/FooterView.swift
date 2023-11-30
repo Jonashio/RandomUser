@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct FooterView: View {
-    @Binding var status: Status
-    var action: () -> Void
-    
+    var status: Status
+
     var body: some View {
         ZStack(alignment: .center) {
             switch status {
             case .loading:
                 ProgressView()
             case .idle:
-                EmptyView()
-                    .onAppear(perform: action)
+                ZStack {}
+                    .frame(maxWidth: .infinity, idealHeight: 10)
+                    .background(.white)
             case .error:
                 VStack {
                     Text("Error loading data...")
@@ -35,9 +35,12 @@ struct FooterView: View {
             }
         }
         .frame(height: 50)
+        .onChange(of: status) { oldValue, newValue in
+            guard newValue == .idle else { return }
+        }
     }
 }
 
 #Preview(nil, traits: .fixedLayout(width: 150, height: 50), body: {
-    FooterView(status: .constant(.error), action: {})
+    FooterView(status: .error)
 })

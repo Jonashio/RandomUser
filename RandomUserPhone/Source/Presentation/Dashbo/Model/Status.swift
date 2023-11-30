@@ -5,8 +5,8 @@
 //  Created by Jonashio on 28/11/23.
 //
 
-enum Status {
-    case normal
+enum Status: Int {
+    case idle
     case loading
     case error
 }

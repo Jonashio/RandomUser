@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension DispatchQueue {
+    static func mainAfter(deadline: DispatchTime, completion: @escaping (() -> Void)) {
+        DispatchQueue.global().asyncAfter(deadline: deadline) { DispatchQueue.main.sync { completion() }}
+    }
+}
