@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>RandomUserPhoneDev.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>RandomUserPhonePro.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>A16F70582B15EF2300A98A56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A16F70672B15EF2400A98A56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A16F70712B15EF2400A98A56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A176C9F22B1495F500DBC189</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A176CA032B1495F500DBC189</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A176CA0D2B1495F500DBC189</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
