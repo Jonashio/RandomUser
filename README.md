@@ -9,18 +9,15 @@
 
 ## Notas Importantes
 
-Problemas con los Commits: Hemos notado algunos problemas en los últimos commits, posiblemente relacionados con el uso de una versión beta de Xcode para sincronizar con GitHub.
-Network Manager como Datasource: Implementamos un gestor de red personalizado como fuente de datos principal.
-Uso de Async/Await: Empleamos la sintaxis async/await en operaciones asíncronas para una gestión eficiente y un código más limpio.
-Desarrollo en SwiftUI: Todas las vistas se han creado usando SwiftUI, aprovechando su potente interfaz declarativa.
-Arquitectura MVVM con Capas Adicionales: Adoptamos MVVM como arquitectura principal, enriqueciéndola con capas adicionales para una mejor organización del código.
+He notado algunos problemas en los últimos commits, posiblemente relacionados con el uso de una versión beta de Xcode para sincronizar con GitHub.
+Se ha utilizado SwiftData para la persistencia. Se ha utilizado async/await como alternativa a combine. Todas las vistas se han creado usando SwiftUI. Adoptamos MVVM como arquitectura principal, enriqueciéndola con capas adicionales para una mejor organización del código.
 
 
 ## Swift Package Manager y Dependencias
 
-* [**lottie-ios**]
-* [**kingfisher**]
-* [**SnapshotTesting**]
+* [**lottie-ios**](https://github.com/airbnb/lottie-ios)
+* [**kingfisher**](https://github.com/onevcat/Kingfisher)
+* [**SnapshotTesting**](https://github.com/pointfreeco/swift-snapshot-testing)
 
 
 ## Author
