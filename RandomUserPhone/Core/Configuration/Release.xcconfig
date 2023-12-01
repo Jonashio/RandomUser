@@ -1,0 +1,11 @@
+//
+//  Release.xcconfig
+//  RandomUser
+//
+//  Created by Jonashio on 27/11/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+KEY_URL_BASE=randomuser.me

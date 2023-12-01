@@ -9,7 +9,7 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>RandomUserPhonePro.xcscheme_^#shared#^_</key>
+		<key>RandomUserPhonePro.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -17,32 +17,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>A16F70582B15EF2300A98A56</key>
+		<key>A1F1314E2B19944B00059BBE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A16F70672B15EF2400A98A56</key>
+		<key>A1F1315D2B19944C00059BBE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A16F70712B15EF2400A98A56</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A176C9F22B1495F500DBC189</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A176CA032B1495F500DBC189</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A176CA0D2B1495F500DBC189</key>
+		<key>A1F131672B19944C00059BBE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
