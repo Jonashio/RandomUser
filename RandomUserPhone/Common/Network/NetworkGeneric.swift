@@ -13,6 +13,7 @@ public enum NetworkError:Error {
     case dataError(Error)
     case httpError
     case URLInvalid
+    case unknown
 
     public var description:String {
         switch self {
@@ -24,16 +25,30 @@ public enum NetworkError:Error {
             return "HTTP error"
         case .URLInvalid:
             return "Invalid URL"
+        case .unknown:
+            return "Unknown error"
         }
     }
 }
 
-struct NetworkGeneric {
+class NetworkGeneric {
+
     struct StatusCode {
         static let success = 200...299
     }
     
+    var predefinedDataTest: Data?
+    
+    init(predefinedDataTest: Data? = nil) {
+        self.predefinedDataTest = predefinedDataTest
+    }
+    
     func getData<Type>(profileEndpoint: NetworkManager, builder: ((Data) throws -> Type), keeper: ((Data) -> Void)? = nil) async -> Result<Type, NetworkError> {
+        
+        guard predefinedDataTest == nil else {
+            guard let data = try? builder(predefinedDataTest!) else { return .failure(.unknown) }
+            return .success(data)
+        }
         
         printRequest(profileEndpoint)
         do {

@@ -15,8 +15,17 @@ struct RandomUserApp: App {
     let modelContainer: ModelContainer
     
     init() {
+        var inMemory = false
+
+        #if DEBUG
+        if CommandLine.arguments.contains("enable-testing") {
+            inMemory = true
+        }
+        #endif
+        
         do {
-            modelContainer = try ModelContainer(for: UserPersistenceModel.self)
+            let config = ModelConfiguration(for: UserPersistenceModel.self, isStoredInMemoryOnly: inMemory)
+            modelContainer = try ModelContainer(for: UserPersistenceModel.self, configurations: config)
         } catch {
             fatalError("Could not initialize ModelContainer")
         }

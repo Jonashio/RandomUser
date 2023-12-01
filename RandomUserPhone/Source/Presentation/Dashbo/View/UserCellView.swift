@@ -17,14 +17,18 @@ struct UserCellView: View {
     var body: some View {
         ZStack {
             HStack {
-                KFImage(URL(string: user.picture.medium))
-                    .loadDiskFileSynchronously()
-                    .cacheMemoryOnly()
-                    .scaleFactor(UIScreen.main.scale)
-                    .resizing(referenceSize: CGSize(width: 70, height: 70))
-                    .clipShape(Circle())
-                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 0))
-                    .matchedGeometryEffect(id: "img_\(user.id)", in: namespace)
+                ZStack {
+                    KFImage(URL(string: user.picture.medium))
+                        .loadDiskFileSynchronously()
+                        .cacheMemoryOnly()
+                        .scaleFactor(UIScreen.main.scale)
+                        .resizing(referenceSize: CGSize(width: 70, height: 70))
+                        .clipShape(Circle())
+                        .matchedGeometryEffect(id: "img_\(user.id)", in: namespace)
+                }
+                .frame(width: 70, height: 70)
+                .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 0))
+
                 
                 VStack(spacing: 3) {
                     HStack{

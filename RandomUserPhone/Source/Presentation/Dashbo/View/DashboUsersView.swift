@@ -57,6 +57,6 @@ struct DashboUsersView: View {
 #Preview {
     DashboUsersView()
         .modelContainer(try! ModelContainer(for: UserPersistenceModel.self))
-        .environment(DashboUsersViewModel(useCase: GetUsersUseCase(true)))
+        .environment(DashboUsersViewModel(useCase: GetUsersUseCase(repository: NetworkGeneric(predefinedDataTest: LocalFileManager.loadPrivateFile(filename: "randomuser", ofType: "json")))))
         
 }

@@ -51,6 +51,28 @@
                ReferencedContainer = "container:RandomUser.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A126C9D62B1A0264005A5D17"
+               BuildableName = "RandomUserPhoneSnapshotTests.xctest"
+               BlueprintName = "RandomUserPhoneSnapshotTests"
+               ReferencedContainer = "container:RandomUser.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A126C9E82B1A1221005A5D17"
+               BuildableName = "RandomUserPhoneSnapshot.xctest"
+               BlueprintName = "RandomUserPhoneSnapshot"
+               ReferencedContainer = "container:RandomUser.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
