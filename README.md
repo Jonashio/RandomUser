@@ -11,6 +11,7 @@
 
 He notado algunos problemas en los últimos commits, posiblemente relacionados con el uso de una versión beta de Xcode para sincronizar con GitHub.
 Se ha utilizado SwiftData para la persistencia. Se ha utilizado async/await como alternativa a combine. Todas las vistas se han creado usando SwiftUI. Adoptamos MVVM como arquitectura principal, enriqueciéndola con capas adicionales para una mejor organización del código.
+Respecto a los test no hay gran coverage porque esto solo pretende ser una prueba de conocimientos.
 
 
 ## Dependencias
